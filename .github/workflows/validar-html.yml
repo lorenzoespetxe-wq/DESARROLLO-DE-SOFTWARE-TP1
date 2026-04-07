@@ -15,11 +15,12 @@ jobs:
         with:
           node-version: '20'
           
-      - name: Instalar HTMLHint (Linter avanzado)
+      - name: Instalar HTMLHint
         run: npm install -g htmlhint
         
       - name: Ejecutar HTMLHint
-        run: htmlhint "src/**/*.html"
+        # Cambiado para buscar en todo el repo, incluyendo la raíz
+        run: htmlhint "*/.html"
 
   w3c-validation:
     name: Validación Estricta W3C
@@ -29,8 +30,14 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v4
         
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
       - name: Instalar validador HTML5
         run: pip install html5validator
         
       - name: Ejecutar validación W3C
-        run: html5validator --root src/ --match "*.html"
+        # Cambiado --root a . (punto) para que valide la raíz
+        run: html5validator --root . --match "*.html"
