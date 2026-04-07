@@ -1,0 +1,36 @@
+name: Validación Avanzada de HTML
+
+on: [push]
+
+jobs:
+  lint-html:
+    name: Linting de código HTML
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+        
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Instalar HTMLHint (Linter avanzado)
+        run: npm install -g htmlhint
+        
+      - name: Ejecutar HTMLHint
+        run: htmlhint "src/**/*.html"
+
+  w3c-validation:
+    name: Validación Estricta W3C
+    needs: lint-html 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+        
+      - name: Instalar validador HTML5
+        run: pip install html5validator
+        
+      - name: Ejecutar validación W3C
+        run: html5validator --root src/ --match "*.html"
