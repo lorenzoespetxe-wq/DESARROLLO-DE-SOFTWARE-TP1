@@ -6,4 +6,4 @@ Integrantes del Grupo:
 
 - Gerónimo Guevara: Legajo 52661 email gguevaraman@gmail.com
 - Lorenzo Espetxe
-- Lucas Norton
+- Lucas Norton: Legajo 52719 email nortonlucas01@gmail.com
