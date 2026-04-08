@@ -4,6 +4,6 @@ Trabajo Práctico Integrador de Git Avanzado - UTN. Proyecto colaborativo en HTM
 
 Integrantes del Grupo:
 
-- Gerónimo Guevara: Legajo 52661 email gguevaraman@gmail.com
-- Lorenzo Espetxe
-- Lucas Norton: Legajo 52719 email nortonlucas01@gmail.com
+- Gerónimo Guevara: Legajo 52661 - email: gguevaraman@gmail.com
+- Lorenzo Espetxe: Legajo 52636 - email: lorenzo@espetxe.com
+- Lucas Norton: Legajo 52719 - email: nortonlucas01@gmail.com
